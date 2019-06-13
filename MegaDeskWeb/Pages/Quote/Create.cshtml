@@ -1,0 +1,69 @@
+﻿@page
+@model MegaDeskWeb.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Quote</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Quote.CustomerName" class="control-label"></label>
+                <input asp-for="Quote.CustomerName" class="form-control" />
+                <span asp-validation-for="Quote.CustomerName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quote.QuoteDate" class="control-label"></label>
+                <input asp-for="Quote.QuoteDate" class="form-control" />
+                <span asp-validation-for="Quote.QuoteDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Desk.Width" class="control-label"></label>
+                <input asp-for="Desk.Width" class="form-control" />
+                <span asp-validation-for="Desk.Width" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Desk.Depth" class="control-label"></label>
+                <input asp-for="Desk.Depth" class="form-control" />
+                <span asp-validation-for="Desk.Depth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Desk.NumDrawers" class="control-label"></label>
+                <input asp-for="Desk.NumDrawers" class="form-control" />
+                <span asp-validation-for="Desk.NumDrawers" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SurfaceMaterial.SurfaceMaterialName" class="control-label"></label>
+                <input asp-for="SurfaceMaterial.SurfaceMaterialName" class="form-control" />
+                <span asp-validation-for="SurfaceMaterial.SurfaceMaterialName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Delivery.DeliveryName" class="control-label"></label>
+                <input asp-for="Delivery.DeliveryName" class="form-control" />
+                <span asp-validation-for="Delivery.DeliveryName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quote.DeskPrice" class="control-label"></label>
+                <input asp-for="Quote.DeskPrice" class="form-control" />
+                <span asp-validation-for="Quote.DeskPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,55 @@
+﻿@page
+@model MegaDeskWeb.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Quote</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Quote.QuoteId" />
+            <div class="form-group">
+                <label asp-for="Quote.DeskId" class="control-label"></label>
+                <input asp-for="Quote.DeskId" class="form-control" />
+                <span asp-validation-for="Quote.DeskId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quote.DeliveryId" class="control-label"></label>
+                <input asp-for="Quote.DeliveryId" class="form-control" />
+                <span asp-validation-for="Quote.DeliveryId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quote.CustomerName" class="control-label"></label>
+                <input asp-for="Quote.CustomerName" class="form-control" />
+                <span asp-validation-for="Quote.CustomerName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quote.QuoteDate" class="control-label"></label>
+                <input asp-for="Quote.QuoteDate" class="form-control" />
+                <span asp-validation-for="Quote.QuoteDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quote.DeskPrice" class="control-label"></label>
+                <input asp-for="Quote.DeskPrice" class="form-control" />
+                <span asp-validation-for="Quote.DeskPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
