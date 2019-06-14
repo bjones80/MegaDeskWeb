@@ -11,8 +11,12 @@ namespace MegaDeskWeb.Models
         public int QuoteId { get; set; }
 
         public int DeskId { get; set; }
+        /* Navigation Properties */
+        public virtual Desk Desk { get; set; }
 
         public int DeliveryId { get; set; }
+        /* Navigation Properties */
+        public virtual Delivery Delivery { get; set; }
 
         public string CustomerName { get; set; }
 
@@ -20,6 +24,7 @@ namespace MegaDeskWeb.Models
         public DateTime QuoteDate { get; set; }
 
         public decimal DeskPrice { get; set; }
+
 
 
 

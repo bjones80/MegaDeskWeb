@@ -19,6 +19,11 @@ namespace MegaDeskWeb
         }
 
         public Quote Quote { get; set; }
+        public MegaDeskWeb.Models.Desk Desk { get; set; }
+        public SurfaceMaterial SurfaceMaterial { get; set; }
+        public Delivery Delivery { get; set; }
+
+
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {

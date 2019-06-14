@@ -18,12 +18,17 @@ namespace MegaDeskWeb
             _context = context;
         }
 
-        public IList<Quote> Quote { get; set; }
-        public IList<Desk> Desk { get; set; }
+        public IList<MegaDeskWeb.Models.Quote> Quote { get; set; }
+        public IList<MegaDeskWeb.Models.Desk> Desk{ get; set; }
+        public IList<SurfaceMaterial> SurfaceMaterial { get; set; }
+        public IList<Delivery> Delivery { get; set; }
 
         public async Task OnGetAsync()
         {
             Quote = await _context.Quote.ToListAsync();
+            Desk = await _context.Desk.ToListAsync();
+            SurfaceMaterial = await _context.SurfaceMaterial.ToListAsync();
+            Delivery = await _context.Delivery.ToListAsync();
         }
     }
 }

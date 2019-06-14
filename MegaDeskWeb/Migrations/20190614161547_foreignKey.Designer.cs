@@ -4,14 +4,16 @@ using MegaDeskWeb.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MegaDeskWeb.Migrations
 {
     [DbContext(typeof(MegaDeskWebContext))]
-    partial class MegaDeskWebContextModelSnapshot : ModelSnapshot
+    [Migration("20190614161547_foreignKey")]
+    partial class foreignKey
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -102,7 +104,7 @@ namespace MegaDeskWeb.Migrations
             modelBuilder.Entity("MegaDeskWeb.Models.Desk", b =>
                 {
                     b.HasOne("MegaDeskWeb.Models.SurfaceMaterial", "SurfaceMaterial")
-                        .WithMany("Desk")
+                        .WithMany()
                         .HasForeignKey("SurfaceMaterialId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
@@ -110,12 +112,12 @@ namespace MegaDeskWeb.Migrations
             modelBuilder.Entity("MegaDeskWeb.Models.Quote", b =>
                 {
                     b.HasOne("MegaDeskWeb.Models.Delivery", "Delivery")
-                        .WithMany("Quote")
+                        .WithMany()
                         .HasForeignKey("DeliveryId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("MegaDeskWeb.Models.Desk", "Desk")
-                        .WithMany("Quote")
+                        .WithMany()
                         .HasForeignKey("DeskId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });

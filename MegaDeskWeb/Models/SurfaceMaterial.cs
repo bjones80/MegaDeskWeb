@@ -11,5 +11,8 @@ namespace MegaDeskWeb.Models
         public string SurfaceMaterialName { get; set; }
         public decimal SurfaceMaterialPrice { get; set; }
 
+        /*allow foreign key to happen */
+        public virtual ICollection<Desk> Desk { get; set; }
+
     }
 }

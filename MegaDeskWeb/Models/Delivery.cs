@@ -13,5 +13,8 @@ namespace MegaDeskWeb.Models
         public decimal From1000To2000 { get; set; }
         public decimal GreaterThan2000 { get; set; }
 
+        /*allow foreign key to happen */
+        public virtual ICollection<Quote> Quote { get; set; }
+
     }
 }

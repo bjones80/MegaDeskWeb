@@ -13,18 +13,6 @@
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Quote.DeskId)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Quote.DeskId)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Quote.DeliveryId)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Quote.DeliveryId)
-        </dd>
-        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Quote.CustomerName)
         </dt>
         <dd class="col-sm-10">
@@ -35,6 +23,36 @@
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Quote.QuoteDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Desk.Width)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Desk.Width)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Desk.Depth)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Desk.Depth)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Desk.NumDrawers)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Desk.NumDrawers)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SurfaceMaterial.SurfaceMaterialName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SurfaceMaterial.SurfaceMaterialName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Delivery.DeliveryName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Delivery.DeliveryName)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Quote.DeskPrice)

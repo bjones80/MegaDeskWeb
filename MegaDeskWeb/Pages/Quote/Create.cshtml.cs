@@ -25,7 +25,7 @@ namespace MegaDeskWeb
 
         [BindProperty]
         public Quote Quote { get; set; }
-        public Desk Desk { get; set; }
+        public MegaDeskWeb.Models.Desk Desk { get; set; }
         public SurfaceMaterial SurfaceMaterial { get; set; }
         public Delivery Delivery { get; set; }
 
