@@ -18,7 +18,7 @@ namespace MegaDeskWeb
             _context = context;
         }
 
-        public IList<MegaDeskWeb.Models.Quote> Quote { get; set; }
+        public IList<Quote> Quote { get; set; }
         public IList<MegaDeskWeb.Models.Desk> Desk{ get; set; }
         public IList<SurfaceMaterial> SurfaceMaterial { get; set; }
         public IList<Delivery> Delivery { get; set; }

@@ -16,6 +16,16 @@ namespace MegaDeskWeb
         public CreateModel(MegaDeskWeb.Models.MegaDeskWebContext context)
         {
             _context = context;
+            IQueryable<string> matQuery = from m in _context.SurfaceMaterial
+                                          orderby m.SurfaceMaterialName
+                                          select m.SurfaceMaterialName;
+
+            SurfaceMaterials = new SelectList(matQuery.Distinct().ToList());
+
+            IQueryable<string> deliQuery = from d in _context.Delivery
+                                           orderby d.DeliveryName
+                                           select d.DeliveryName;
+            Deliverys = new SelectList(deliQuery.Distinct().ToList());
         }
 
         public IActionResult OnGet()
@@ -27,7 +37,9 @@ namespace MegaDeskWeb
         public Quote Quote { get; set; }
         public MegaDeskWeb.Models.Desk Desk { get; set; }
         public SurfaceMaterial SurfaceMaterial { get; set; }
+        public SelectList SurfaceMaterials { get; set; }
         public Delivery Delivery { get; set; }
+        public SelectList Deliverys { get; set; }
 
 
         public async Task<IActionResult> OnPostAsync()

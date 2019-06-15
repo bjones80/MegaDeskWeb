@@ -40,19 +40,17 @@
             </div>
             <div class="form-group">
                 <label asp-for="SurfaceMaterial.SurfaceMaterialName" class="control-label"></label>
-                <input asp-for="SurfaceMaterial.SurfaceMaterialName" class="form-control" />
-                <span asp-validation-for="SurfaceMaterial.SurfaceMaterialName" class="text-danger"></span>
+                <p>
+                    <select value="Desk.SurfaceMaterial.SurfaceMaterialName" asp-for="SurfaceMaterial" asp-items="Model.SurfaceMaterials"></select>
+                </p>
             </div>
-            <div class="form-group">
+            @*<div class="form-group">
                 <label asp-for="Delivery.DeliveryName" class="control-label"></label>
-                <input asp-for="Delivery.DeliveryName" class="form-control" />
-                <span asp-validation-for="Delivery.DeliveryName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Quote.DeskPrice" class="control-label"></label>
-                <input asp-for="Quote.DeskPrice" class="form-control" />
-                <span asp-validation-for="Quote.DeskPrice" class="text-danger"></span>
-            </div>
+                <p>
+                    <select value="Desk.Delivery.DeliveryId.DeliveryName" asp-for="Delivery" asp-items="Model.Deliverys"></select>
+
+                </p>
+            </div>*@
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
